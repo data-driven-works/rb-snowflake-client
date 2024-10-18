@@ -8,6 +8,8 @@ module RubySnowflake
     EPOCH_JULIAN_DAY_NUMBER = Date.new(1970,1,1).jd
     TIME_FORMAT = "%s.%N".freeze
 
+    attr_reader :data, :row_types
+    
     def initialize(row_types, column_to_index, data)
       @row_types = row_types
       @data = data
